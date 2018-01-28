@@ -21,7 +21,7 @@ char *printpromt(){
 	char *d = (char *)malloc(len*sizeof(char));
 	getcwd(a,len);//directory path
 	gethostname(b,len);
-    getlogin_r(c,len);
+    	getlogin_r(c,len);
 	snprintf(d,len,"%s@%s:~%s$ ", c,b,a);
 	return d;
 
@@ -77,7 +77,7 @@ int main(int argc, char const *argv[])
 		if(nofc==0)
 			continue;
 
-		//for bachkground process
+		//for background process
 		if(strcmp(args[nofc-1],"&")==0){
 			pid = fork();
 			if(pid<0){
