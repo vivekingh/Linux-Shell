@@ -48,7 +48,7 @@ char *printpromt(){
 	char *d = (char *)malloc(len*sizeof(char));
 	getcwd(a,len);//directory path
 	gethostname(b,len);
-    getlogin_r(c,len);
+   	getlogin_r(c,len);
 	snprintf(d,len,"%s@%s:~%s$ ", c,b,a);
 	return d;
 
@@ -167,7 +167,7 @@ int main(int argc, char const *argv[])
 			}
 			if(pid==0){
 
-				if(strcmp(args[0]+strlen(args[0])-2,".c")==0){
+				if(strcmp(args[0]+strlen(args[0])-2,".c")==0){//for executing test.c <inp.txt> out.txt
 					strcpy(e,"gcc ");
 					strcat(e,args[0]);
 					system(e);
