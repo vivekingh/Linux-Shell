@@ -15,6 +15,6 @@ It also supports commands like man for manual page etc. which are not specific t
 
 ## Compilation and Execution
 ```
-gcc shell.c
+gcc shell.c -lreadline
 ./a.out
 ```
